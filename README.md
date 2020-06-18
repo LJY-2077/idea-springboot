@@ -1,2 +1,2 @@
 # idea-springboot
-spingboot基本搭建实现页面后台数据交互
+spirngboot简单项目搭建,实现登录拦截管理及页面访问互
