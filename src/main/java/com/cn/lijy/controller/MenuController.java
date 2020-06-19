@@ -1,13 +1,10 @@
 package com.cn.lijy.controller;
 
-import com.cn.lijy.bean.PortalFolder;
 import com.cn.lijy.bean.SysMenu;
-import com.cn.lijy.service.PortalFolderService;
+import com.cn.lijy.service.SystemMenuService;
 import net.sf.json.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,7 +19,7 @@ import java.util.List;
 @RestController
 public class MenuController {
     @Autowired
-    PortalFolderService portalFolderService;
+    SystemMenuService portalFolderService;
 
     @RequestMapping(value = "/currentFolderList")
     @ResponseBody

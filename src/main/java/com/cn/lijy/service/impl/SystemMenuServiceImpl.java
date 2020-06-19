@@ -2,10 +2,9 @@ package com.cn.lijy.service.impl;
 
 import com.cn.lijy.bean.SysMenu;
 import com.cn.lijy.mapper.SysMenuMapper;
-import com.cn.lijy.service.PortalFolderService;
+import com.cn.lijy.service.SystemMenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -16,7 +15,7 @@ import java.util.List;
  */
 
 @Service
-public class PortalFolderServiceImpl implements PortalFolderService {
+public class SystemMenuServiceImpl implements SystemMenuService {
     @Autowired
     SysMenuMapper sysMenuMapper;
 

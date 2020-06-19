@@ -9,8 +9,10 @@ import java.util.List;
  * @descriptin
  * @since
  */
-public interface PortalFolderService {
+public interface SystemMenuService {
 
-    /**菜单list*/
+    /**
+     * 菜单list
+     */
     List<SysMenu> getFolderList();
 }
