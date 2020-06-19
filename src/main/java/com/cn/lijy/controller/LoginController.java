@@ -35,7 +35,7 @@ public class LoginController {
             session.setAttribute("userName", username);
             System.out.println("----" + username);
             map.put("username", username);
-            return "redirect:/dashboard";
+            return "redirect:/menu";
 
         } else  //输入错误，清空session，提示用户名密码错误
         {
@@ -49,6 +49,11 @@ public class LoginController {
     public String logout(HttpSession session) {
         session.removeAttribute("username");
         return "login";
+    }
+
+    @RequestMapping(value = "/menu")
+    public String menu(HttpSession session) {
+        return "/menu/menutree";
     }
 
 
