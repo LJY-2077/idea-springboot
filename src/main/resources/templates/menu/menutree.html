@@ -4,18 +4,21 @@
         <meta charset="UTF-8">
         <title>主页面-菜单栏</title>
         <link rel="stylesheet" type="text/css" href="../static/zTree/css/zTreeStyle/zTreeStyle.css"/>
-        <script type="text/javascript" src="../static/zTree/js/jquery-1.4.4.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../static/bootstrap/css/bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" href="../static/bootstrap/css/bootstrap-grid.css"/>
+        <link rel="stylesheet" type="text/css" href="../static/bootstrap/css/bootstrap-reboot.css"/>
+
+        <script type="text/javascript" src="../static/jq/jquery-1.9.1.min.js"></script>
         <script type="text/javascript" src="../static/zTree/js/jquery.ztree.core.js"></script>
         <script type="text/javascript" src="../static/zTree/js/jquery.ztree.all.min.js"></script>
-
         <script type="text/javascript" src="../static/zTree/demo/ztree.js"></script>
+
+        <script type="text/javascript" src="../static/bootstrap/js/bootstrap.bundle.js"></script>
+        <script type="text/javascript" src="../static/bootstrap/js/bootstrap.js"></script>
     </head>
     <body>
         <ul id="treeDemo" class="ztree" style="margin-top: 10px; width: 200px; height: 150px;">
         </ul>
-        <ul id="treeDemo2" class="ztree" style="margin-top: 10px; width: 200px; height: 150px;">
-        </ul>
-
         <script>
             function createTree(url, params, treeId) {
                 var zTree; //用于保存创建的树节点

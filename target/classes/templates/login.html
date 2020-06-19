@@ -4,6 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <title>登录页面</title>
+    <link rel="stylesheet" type="text/css" href="../static/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/bootstrap/css/bootstrap-grid.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/bootstrap/css/bootstrap-reboot.css"/>
+    <script type="text/javascript" src="../static/jq/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../static/bootstrap/js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="../static/bootstrap/js/bootstrap.js"></script>
+
 </head>
 <body>
 
@@ -17,12 +24,12 @@
             <p style="color:red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
         </div>
         <div th:align="center">
-            <label class="sr-only">用户名：</label>
+            <label class="sr-only">账户：</label>
             <input type="text" name="username" class="form-control" placeholder="Username"
                    required="" autofocus="">
         </div>
         <div th:align="center">
-            <label class="sr-only">密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+            <label class="sr-only">密码：</label>
             <input type="password" name="password" class="form-control" placeholder="Password"
                    required="">
         </div>
