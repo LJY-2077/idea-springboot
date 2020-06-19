@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+</head>
+<body>
+简单的springboot登录页面
+<form class="form-signin"  th:action="@{/login}" method="post">
+    <!-- 取值替换原来默认的值-->
+    <img class="mb-4"  src="assets/img/bootstrap-solid.svg" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <p style="color:red" th:text="${msg}"  th:if="${not #strings.isEmpty(msg)}"></p>
+    <label class="sr-only" >Username</label>
+    <input type="text" name="username" class="form-control" placeholder="Username"
+           required="" autofocus="">
+    <label class="sr-only" >Password</label>
+    <input type="password" name="password" class="form-control" placeholder="Password"
+           required="">
+    <div class="checkbox mb-3">
+        <label>
+                <input type="checkbox" value="remember-me"/> Remember me
+            </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" >Sign in</button>
+    <p class="mt-5 mb-3 text-muted">© 2019-2020</p>
+</form>
+
+
+</body>
+</html>

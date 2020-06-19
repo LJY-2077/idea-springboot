@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    name: test  #数据库名
+    url: jdbc:mysql://localhost:3306/springboot_v1?serverTimezone=UTC #url
+    username: root  #用户名
+    password: 123456  #密码
+    driver-class-name: com.mysql.cj.jdbc.Driver  #数据库链接驱动
+  resources:
+    static-locations: classpath:/static,classpath:/public,classpath:/resources,classpath:/META-INF/resources
+
+
+    #thymeleaf
+    #默认到resource/templates目录下寻找
+  thymeleaf:
+    suffix: .html
+    check-template-location: true
+    encoding: UTF-8
+    content-type: text/html
+    cache: false
+    mode: LEGACYHTML5
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml  #配置映射文件
+  type-aliases-package: com.cn.lijy.bean #配置实体类
+

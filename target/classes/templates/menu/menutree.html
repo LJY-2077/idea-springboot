@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>菜单</title>
+        <link rel="stylesheet" type="text/css" href="../static/zTree/css/zTreeStyle/zTreeStyle.css"/>
+        <script type="text/javascript" src="../static/zTree/js/jquery-1.4.4.min.js"></script>
+        <script type="text/javascript" src="../static/zTree/js/jquery.ztree.core.js"></script>
+        <script type="text/javascript" src="../static/zTree/js/jquery.ztree.all.min.js"></script>
+
+        <script type="text/javascript" src="../static/zTree/demo/ztree.js"></script>
+    </head>
+    <body>
+        <ul id="treeDemo" class="ztree" style="margin-top: 10px; width: 200px; height: 150px;">
+        </ul>
+        <ul id="treeDemo2" class="ztree" style="margin-top: 10px; width: 200px; height: 150px;">
+        </ul>
+
+        <script>
+            function createTree(url, params, treeId) {
+                var zTree; //用于保存创建的树节点
+                var setting = { //设置
+                    check: {
+                        enable: true,
+                        chkboxType: {
+                            "Y": "ps",
+                            "N": "ps"
+                        }
+                    },
+                    view: {
+                        showLine: true, //显示辅助线
+                        dblClickExpand: true
+                    },
+                    data: {
+                        simpleData: {
+                            enable: true,
+                            idKey: "id",
+                            pIdKey: "pid",
+                            rootPId: 0
+                        }
+                    }
+                };
+
+                //zTree = $.fn.zTree.init($(treeId), setting, nodes); //创建树
+
+                $.ajax({ //请求数据,创建树
+                    type: 'GET',
+                    url: url,
+                    data: params,
+                    dataType: "json", //返回的结果为json
+                    success: function (data) {
+                        zTree = $.fn.zTree.init($(treeId), setting, data); //创建树
+                    },
+                    error: function (data) {
+                        alert("创建树失败!");
+                    }
+                });
+            }
+
+            function initTree() {
+                var roleId = $("#roleId").val();
+                var params = {
+                    roleId: roleId
+                };
+                createTree("/currentFolderList", params, "#treeDemo");//创建  permission/menuData 后台加载数据路由
+            }
+
+            initTree();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+D:\workspace\springboot_demo_v1\src\main\java\com\cn\lijy\controller\MenuController.java
+D:\workspace\springboot_demo_v1\src\main\java\com\cn\lijy\config\LoginWebMvcConfigurer.java
+D:\workspace\springboot_demo_v1\src\main\java\com\cn\lijy\mapper\SysMenuMapper.java
+D:\workspace\springboot_demo_v1\src\main\java\com\cn\lijy\service\impl\PortalFolderServiceImpl.java
+D:\workspace\springboot_demo_v1\src\main\java\com\cn\lijy\interceptor\LoginHandlerInterceptor.java
+D:\workspace\springboot_demo_v1\src\main\java\com\cn\lijy\bean\SysMenu.java
+D:\workspace\springboot_demo_v1\src\main\java\com\cn\lijy\controller\LoginController.java
+D:\workspace\springboot_demo_v1\src\main\java\com\cn\lijy\service\PortalFolderService.java
+D:\workspace\springboot_demo_v1\src\main\java\com\cn\lijy\bean\PortalFolder.java
+D:\workspace\springboot_demo_v1\src\main\java\com\cn\lijy\SpringbootDemoV1Application.java
