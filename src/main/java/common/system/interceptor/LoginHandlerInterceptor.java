@@ -1,4 +1,4 @@
-package com.cn.lijy.interceptor;
+package common.system.interceptor;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;

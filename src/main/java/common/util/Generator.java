@@ -1,4 +1,4 @@
-package com.cn.lijy.util;
+package common.util;
 
 import org.mybatis.generator.api.IntrospectedColumn;
 import org.mybatis.generator.api.IntrospectedTable;

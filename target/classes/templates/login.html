@@ -6,26 +6,36 @@
     <title>登录页面</title>
 </head>
 <body>
-简单的springboot登录页面
-<form class="form-signin"  th:action="@{/login}" method="post">
-    <!-- 取值替换原来默认的值-->
-    <img class="mb-4"  src="assets/img/bootstrap-solid.svg" alt="" width="72" height="72">
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-    <p style="color:red" th:text="${msg}"  th:if="${not #strings.isEmpty(msg)}"></p>
-    <label class="sr-only" >Username</label>
-    <input type="text" name="username" class="form-control" placeholder="Username"
-           required="" autofocus="">
-    <label class="sr-only" >Password</label>
-    <input type="password" name="password" class="form-control" placeholder="Password"
-           required="">
-    <div class="checkbox mb-3">
-        <label>
+
+<div th:title="登录窗口"
+     th:style="'background:#5f8dd4;height:300px;width:50%;position: absolute;top: 0;left: 0;right: 0;bottom: 0;margin: auto;'">
+    <form class="form-signin" th:action="@{/login}" method="post">
+        <!-- 取值替换原来默认的值-->
+        <img class="mb-4" src="assets/img/bootstrap-solid.svg" alt="" width="72" height="72">
+        <div th:align="center">
+            <h1 class="h3 mb-3 font-weight-normal">登录窗口</h1>
+            <p style="color:red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
+        </div>
+        <div th:align="center">
+            <label class="sr-only">用户名：</label>
+            <input type="text" name="username" class="form-control" placeholder="Username"
+                   required="" autofocus="">
+        </div>
+        <div th:align="center">
+            <label class="sr-only">密码：</label>
+            <input type="password" name="password" class="form-control" placeholder="Password"
+                   required="">
+        </div>
+        <div th:align="center" class="checkbox mb-3">
+            <label>
                 <input type="checkbox" value="remember-me"/> Remember me
             </label>
-    </div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit" >Sign in</button>
-    <p class="mt-5 mb-3 text-muted">© 2019-2020</p>
-</form>
+        </div>
+        <div th:align="center">
+            <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+        </div>
+    </form>
+</div>
 
 
 </body>
