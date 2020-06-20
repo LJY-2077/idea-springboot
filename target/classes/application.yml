@@ -26,6 +26,8 @@ spring:
     mode: LEGACYHTML5
 
 mybatis:
-  mapper-locations: classpath:mapper/*.xml  #配置映射文件
+  mapper-locations: classpath:mapper/*/*.xml  #配置映射文件
   type-aliases-package: com.cn.lijy.bean #配置实体类
+
+timeout: 3600000
 
