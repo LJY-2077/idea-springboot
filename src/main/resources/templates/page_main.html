@@ -43,6 +43,7 @@
 <!--必须使用较新版本的BootStrap才有如下效果-->
 
 <body>
+
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -71,24 +72,10 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-9">
-            <div>
-                <ol class="breadcrumb">
-                    <li><span class="glyphicon glyphicon-home"></span>&nbsp;
-                        <a href="page_fore">主页</a>
-                    </li>
-                    <li class="active"></li>
-                </ol>
-            </div>
-            <div align="center" style="padding-top: 50px;">
-                <h1>后台管理系统</h1>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div align="center" style="padding-top: 200px">
-                Copyright © 2017-2018 larger5
+        <div class="col-lg-9">
+            <div class="layui-body">
+                <!-- 内容主体区域 -->
+                    <iframe th:id="iframe" th:name="iframe"  scrolling="no" frameborder="no" ></iframe>
             </div>
         </div>
     </div>
@@ -123,24 +110,11 @@
             },
             callback: {//绑定事件
                 onClick: function (a, b, treeNode) {
-                    var page = treeNode.url;
-                    if (page != undefined) {//需要打开选项卡
-                        //判断当前选项卡是否已经打开
-                        var e = $("#tt").tabs("exists", treeNode.name);
-                        if (e) {
-                            //已经打开
-                            $("#tt").tabs("select", treeNode.name);
-                        } else {
-                            $("#tt")
-                                .tabs(
-                                    "add",
-                                    {
-                                        title: treeNode.name,
-                                        content: '<iframe frameborder="0" width="100%" height="100%" src="' + page + '"></iframe>',
-                                        closable: true,
-                                        iconCls: 'icon-edit'
-                                    });
-                        }
+                    console.log(treeNode)
+                    if(treeNode.url){
+                        window.open(treeNode.url,treeNode.name,"iframe");
+                    }else{
+                        alert("此节点没有链接！")
                     }
                 }
             }
