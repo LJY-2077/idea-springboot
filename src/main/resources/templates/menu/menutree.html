@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="UTF-8">
         <title>主页面-菜单栏</title>
@@ -17,18 +17,35 @@
         <script type="text/javascript" src="../static/bootstrap/js/bootstrap.js"></script>
     </head>
     <body>
-        <ul id="treeDemo" class="ztree" style="margin-top: 10px; width: 200px; height: 150px;">
-        </ul>
-        <script>
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-4 column">
+                        <div id="treeDemo" class="ztree">
+                        </div>
+                    </div>
+                    <div class="col-xs-4 column">
+                    </div>
+                    <div class="col-xs-4 column">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
             function createTree(url, params, treeId) {
                 var zTree; //用于保存创建的树节点
                 var setting = { //设置
+
                     check: {
                         enable: true,
                         chkboxType: {
                             "Y": "ps",
                             "N": "ps"
                         }
+                    },
+                    edit: {
+                        enable: true
                     },
                     view: {
                         showLine: true, //显示辅助线
@@ -41,10 +58,31 @@
                             pIdKey: "pid",
                             rootPId: 0
                         }
+                    },
+                    callback: {//绑定事件
+                        onClick: function (a, b, treeNode) {
+                            var page = treeNode.url;
+                            if (page != undefined) {//需要打开选项卡
+                                //判断当前选项卡是否已经打开
+                                var e = $("#tt").tabs("exists", treeNode.name);
+                                if (e) {
+                                    //已经打开
+                                    $("#tt").tabs("select", treeNode.name);
+                                } else {
+                                    $("#tt")
+                                        .tabs(
+                                            "add",
+                                            {
+                                                title: treeNode.name,
+                                                content: '<iframe frameborder="0" width="100%" height="100%" src="' + page + '"></iframe>',
+                                                closable: true,
+                                                iconCls: 'icon-edit'
+                                            });
+                                }
+                            }
+                        }
                     }
                 };
-
-                //zTree = $.fn.zTree.init($(treeId), setting, nodes); //创建树
 
                 $.ajax({ //请求数据,创建树
                     type: 'GET',
@@ -69,6 +107,41 @@
             }
 
             initTree();
+        </script>
+        <script type="text/javascript">
+            function saveRoleMenus() {
+                var ids = [];
+                var roleId = $('#roleId').val();
+                // alert(roleId);
+                var funcTreeObj = $.fn.zTree.getZTreeObj("treeDemo");
+                var checkedObjs = funcTreeObj.getCheckedNodes(true);
+                for (var i = 0; i < checkedObjs.length; i++) {
+                    if (checkedObjs[i].parent != 0)
+                        ids.push(checkedObjs[i].menuId);
+                }
+                //   alert(ids);
+                $.ajax({
+                    url: "saveRoleMenus",
+                    dataType: "json",
+                    traditional: true,
+                    //属性在这里设置
+                    method: "post",
+                    data: {
+                        "ids": ids,
+                        "roleId": roleId
+                    },
+                    success: function (data) {
+                        document.getElementById("tipContent").innerText = "保存成功";
+                        $("#Tip").modal('show');
+                        $("#bootstrap-table").bootstrapTable("refresh");
+                    },
+                    error: function () {
+                        document.getElementById("tipContent").innerText = "保存失败";
+                        $("#Tip").modal('show');
+                    }
+                });
+
+            }
         </script>
     </body>
 </html>

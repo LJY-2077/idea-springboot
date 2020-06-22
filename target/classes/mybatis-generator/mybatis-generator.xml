@@ -34,7 +34,7 @@
         <commentGenerator>
             <property name="javaFileEncoding" value="UTF-8"/>
             <property name="suppressAllComments" value="false"/><!-- 是否取消注释 -->
-            <property name="suppressDate" value="false"/> <!-- 是否生成注释代时间戳-->
+            <property name="suppressDate" value="false"/> <!-- 是否取消生成注释代时间戳-->
             <property name="dateFormat" value="yyyy-MM-dd"/> <!-- 配合suppressDate使用，指定输出时间戳的格式-->
             <property name="addRemarkComments" value="true"/> <!-- 是否输出表和列的Comment信息-->
         </commentGenerator>
@@ -51,16 +51,16 @@
         </javaTypeResolver>
 
         <!-- 生成实体类地址 -->
-        <javaModelGenerator targetPackage="com.cn.dg.bean" targetProject="${project}">
+        <javaModelGenerator targetPackage="com.cn.dg.bean.system" targetProject="${project}">
             <property name="enableSubPackages" value="false"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
         <!-- 生成mapper.xml文件 -->
-        <sqlMapGenerator targetPackage="mapper" targetProject="${resources}">
+        <sqlMapGenerator targetPackage="mapper.system" targetProject="${resources}">
             <property name="enableSubPackages" value="false"/>
         </sqlMapGenerator>
         <!-- 生成mapxml对应client，也就是接口dao -->
-        <javaClientGenerator targetPackage="com.cn.dg.mapper" targetProject="${project}" type="XMLMAPPER">
+        <javaClientGenerator targetPackage="com.cn.dg.mapper.system" targetProject="${project}" type="XMLMAPPER">
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
         <!-- table可以有多个,每个数据库中的表都可以写一个table，tableName表示要匹配的数据库表,也可以在tableName属性中通过使用%通配符来匹配所有数据库表,只有匹配的表才会自动生成文件 -->

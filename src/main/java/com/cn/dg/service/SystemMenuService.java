@@ -14,5 +14,5 @@ public interface SystemMenuService {
     /**
      * 菜单list
      */
-    List<DgSysMenu> getFolderList();
+    List<DgSysMenu> getMenuList();
 }
