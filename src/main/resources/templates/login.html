@@ -16,30 +16,24 @@
 
 <div th:title="登录窗口" th:class="rounded"
      th:style="'background:#5f8dd4;height:300px;width:50%;position: absolute;top: 0;left: 0;right: 0;bottom: 0;margin: auto;'">
-    <form class="form-group" th:action="@{/login_shiro}" method="post">
+    <form class="form-group" th:action="@{/login_page}" method="post">
         <!-- 取值替换原来默认的值-->
         <img class="mb-4" src="assets/img/bootstrap-solid.svg" alt="" width="72" height="72">
-        <div th:align="center">
+        <div th:align="center" th:class="container">
             <h1 class="h3 mb-3 font-weight-normal">登录窗口</h1>
             <p style="color:red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
         </div>
-        <div th:align="center">
+        <div th:align="center" th:class="container">
             <label class="sr-only">账户：</label>
-            <input type="text" name="username" class="form-control" placeholder="Username"
+            <input type="text" name="username" class="form-control col-md-4" placeholder="输入账户······"
                    required="" autofocus="">
-        </div>
-        <div th:align="center">
             <label class="sr-only">密码：</label>
-            <input type="password" name="password" class="form-control" placeholder="Password"
+            <input type="password" name="password" class="form-control col-md-4" placeholder="输入密码·····"
                    required="">
-        </div>
-        <div th:align="center" class="checkbox mb-3">
             <label>
-                <input type="checkbox" value="remember-me"/> Remember me
+                <input type="checkbox" value="remember-me col-md-4"/> Remember me
             </label>
-        </div>
-        <div th:align="center">
-            <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+            <button class="btn btn-primary btn-block col-md-4" type="submit">登录</button>
         </div>
     </form>
 </div>

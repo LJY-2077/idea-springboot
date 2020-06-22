@@ -9,7 +9,6 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,8 +19,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.awt.image.BufferedImage;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -42,28 +39,13 @@ public class LoginController {
     public String gologin() {
         return "login";
     }
-
-    @PostMapping(value = "/login")
-    public String login(@RequestParam("username") String username, @RequestParam("password") String password, Map<String, Object> map,
-                        HttpSession session) {
-        log.warn("进入登录.....");
-
-        if (!StringUtils.isEmpty(username) && "123".equals(password)) {
-
-            session.setAttribute("username", username);
-            System.out.println("----" + username);
-            map.put("username", username);
-            return "redirect:/menu";
-
-        } else  //输入错误，清空session，提示用户名密码错误
-        {
-            session.invalidate();
-            map.put("msg", "用户名密码错误");
-            return "login";
-        }
+    @RequestMapping("page_fore")
+    public String pageFore() {
+        return "page_fore";
     }
 
-    @PostMapping(value = "/login_shiro")
+
+    @PostMapping(value = "/login_page")
     public Response loginShiro(@RequestParam("username") String username, @RequestParam("password") String password, Map<String, Object> map,
                                HttpSession session) {
         log.warn("进入登录.....");
@@ -97,18 +79,9 @@ public class LoginController {
         return "/menu/menutree";
     }
 
-
-    @RequestMapping("dashboard")
-    public String goMain(HttpSession session, Model model) {
-        List<String> list = new ArrayList<>();
-        list.add("a");
-        list.add("b");
-        list.add("c");
-        list.add("d");
-        model.addAttribute("name", session.getAttribute("userName"));
-        model.addAttribute("strList", list);
-        model.addAttribute("show", false);
-        return "success";
+    @RequestMapping(value = "/page_main")
+    public String mainPage(HttpSession session) {
+        return "/page_main";
     }
 
     /**

@@ -37,8 +37,8 @@ public class ShiroConfig {
     public ShiroFilterFactoryBean shiroFilter(@Qualifier("securityManager") SecurityManager manager) {
         ShiroFilterFactoryBean bean = new ShiroFilterFactoryBean();
         bean.setSecurityManager(manager);
-        bean.setLoginUrl("/login_shiro");
-        bean.setSuccessUrl("/menu");
+        bean.setLoginUrl("/login_page");
+        bean.setSuccessUrl("/page_main");
         bean.setUnauthorizedUrl("/");
         //拦截器.
         LinkedHashMap<String, String> filterChainMap = new LinkedHashMap<>();
