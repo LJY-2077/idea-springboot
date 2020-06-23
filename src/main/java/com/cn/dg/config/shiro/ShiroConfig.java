@@ -16,10 +16,12 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedHashMap;
+import java.util.Properties;
 
 /**
  * @Description: shiro配置
@@ -37,7 +39,7 @@ public class ShiroConfig {
      */
     @Bean("shiroFilter")
     public ShiroFilterFactoryBean shiroFilter(@Qualifier("securityManager") SecurityManager manager) {
-        log.info("---------------------ShiroConfig:"+Thread.currentThread().getStackTrace()[1].getMethodName() + "----------------------");
+        log.info("---------------------ShiroConfig:" + Thread.currentThread().getStackTrace()[1].getMethodName() + "----------------------");
 
         ShiroFilterFactoryBean bean = new ShiroFilterFactoryBean();
         bean.setSecurityManager(manager);
@@ -74,7 +76,7 @@ public class ShiroConfig {
      */
     @Bean("credentialMatcher")
     public CredentialMatcher credentialMatcher() {
-        log.info("---------------------ShiroConfig:"+Thread.currentThread().getStackTrace()[1].getMethodName() + "----------------------");
+        log.info("---------------------ShiroConfig:" + Thread.currentThread().getStackTrace()[1].getMethodName() + "----------------------");
         return new CredentialMatcher();
     }
 
@@ -83,7 +85,7 @@ public class ShiroConfig {
      */
     @Bean("authRealm")
     public AuthRealm authRealm(@Qualifier("credentialMatcher") CredentialMatcher matcher) {
-        log.info("---------------------ShiroConfig:"+Thread.currentThread().getStackTrace()[1].getMethodName() + "----------------------");
+        log.info("---------------------ShiroConfig:" + Thread.currentThread().getStackTrace()[1].getMethodName() + "----------------------");
         AuthRealm authRealm = new AuthRealm();
         authRealm.setCacheManager(new MemoryConstrainedCacheManager());
         authRealm.setCredentialsMatcher(matcher);
@@ -95,14 +97,14 @@ public class ShiroConfig {
      */
     @Bean("sessionListener")
     public ShiroSessionListener sessionListener() {
-        log.info("---------------------ShiroConfig:"+Thread.currentThread().getStackTrace()[1].getMethodName() + "----------------------");
+        log.info("---------------------ShiroConfig:" + Thread.currentThread().getStackTrace()[1].getMethodName() + "----------------------");
         ShiroSessionListener sessionListener = new ShiroSessionListener();
         return sessionListener;
     }
 
     @Bean("sessionManager")
     public DefaultWebSessionManager sessionManager() {
-        log.info("---------------------ShiroConfig:"+Thread.currentThread().getStackTrace()[1].getMethodName() + "----------------------");
+        log.info("---------------------ShiroConfig:" + Thread.currentThread().getStackTrace()[1].getMethodName() + "----------------------");
         DefaultWebSessionManager sessionManager = new DefaultWebSessionManager();
         Collection<SessionListener> listeners = new ArrayList<>();
         //配置监听
@@ -121,7 +123,7 @@ public class ShiroConfig {
      */
     @Bean("securityManager")
     public SecurityManager securityManager(@Qualifier("authRealm") AuthRealm authRealm, @Qualifier("rememberMeManager") CookieRememberMeManager rememberMeManager) {
-        log.info("---------------------ShiroConfig:"+Thread.currentThread().getStackTrace()[1].getMethodName() + "----------------------");
+        log.info("---------------------ShiroConfig:" + Thread.currentThread().getStackTrace()[1].getMethodName() + "----------------------");
 
         DefaultWebSecurityManager manager = new DefaultWebSecurityManager();
         //认证、授权
@@ -138,7 +140,7 @@ public class ShiroConfig {
      */
     @Bean("rememberMeCookie")
     public SimpleCookie rememberMeCookie() {
-        log.info("---------------------ShiroConfig:"+Thread.currentThread().getStackTrace()[1].getMethodName() + "----------------------");
+        log.info("---------------------ShiroConfig:" + Thread.currentThread().getStackTrace()[1].getMethodName() + "----------------------");
         //这个参数是cookie的名称，对应前端的checkbox的name = rememberMe
         SimpleCookie simpleCookie = new SimpleCookie("rememberMe");
         simpleCookie.setHttpOnly(true);
@@ -153,7 +155,7 @@ public class ShiroConfig {
      */
     @Bean("rememberMeManager")
     public CookieRememberMeManager rememberMeManager(@Qualifier("rememberMeCookie") SimpleCookie rememberMeCookie) {
-        log.info("---------------------ShiroConfig:"+Thread.currentThread().getStackTrace()[1].getMethodName() + "----------------------");
+        log.info("---------------------ShiroConfig:" + Thread.currentThread().getStackTrace()[1].getMethodName() + "----------------------");
         CookieRememberMeManager cookieRememberMeManager = new CookieRememberMeManager();
         cookieRememberMeManager.setCookie(rememberMeCookie);
         //rememberMe cookie加密的密钥 建议每个项目都不一样 默认AES算法 密钥长度(128 256 512 位)
@@ -166,7 +168,7 @@ public class ShiroConfig {
      */
     @Bean
     public AuthorizationAttributeSourceAdvisor authorizationAttributeSourceAdvisor(@Qualifier("securityManager") SecurityManager securityManager) {
-        log.info("---------------------ShiroConfig:"+Thread.currentThread().getStackTrace()[1].getMethodName() + "----------------------");
+        log.info("---------------------ShiroConfig:" + Thread.currentThread().getStackTrace()[1].getMethodName() + "----------------------");
         AuthorizationAttributeSourceAdvisor advisor = new AuthorizationAttributeSourceAdvisor();
         advisor.setSecurityManager(securityManager);
         return advisor;
@@ -174,11 +176,23 @@ public class ShiroConfig {
 
     @Bean
     public DefaultAdvisorAutoProxyCreator defaultAdvisorAutoProxyCreator() {
-        log.info("---------------------ShiroConfig:"+Thread.currentThread().getStackTrace()[1].getMethodName() + "----------------------");
+        log.info("---------------------ShiroConfig:" + Thread.currentThread().getStackTrace()[1].getMethodName() + "----------------------");
         DefaultAdvisorAutoProxyCreator creator = new DefaultAdvisorAutoProxyCreator();
         creator.setProxyTargetClass(true);
         return creator;
     }
 
+    @Bean(name = "simpleMappingExceptionResolver")
+    public SimpleMappingExceptionResolver createSimpleMappingExceptionResolver() {
+        SimpleMappingExceptionResolver r = new SimpleMappingExceptionResolver();
+        Properties mappings = new Properties();
+        mappings.setProperty("DatabaseException", "databaseError");// 数据库异常处理
+        mappings.setProperty("UnauthorizedException", "403");
+        r.setExceptionMappings(mappings); // None by default
+        r.setDefaultErrorView("error"); // No default
+        r.setExceptionAttribute("ex"); // Default is "exception"
+        // r.setWarnLogCategory("example.MvcLogger"); // No default
+        return r;
+    }
 
 }
