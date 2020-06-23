@@ -1,4 +1,4 @@
-package com.cn.dg.bean.shiro;
+package com.cn.dg.common.util;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

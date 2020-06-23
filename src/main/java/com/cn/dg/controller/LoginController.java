@@ -1,7 +1,7 @@
 package com.cn.dg.controller;
 
 import com.cn.dg.bean.shiro.CacheUser;
-import com.cn.dg.bean.shiro.Response;
+import com.cn.dg.common.util.Response;
 import com.cn.dg.common.util.CaptchaUtil;
 import com.cn.dg.service.IUserService;
 import lombok.extern.slf4j.Slf4j;
