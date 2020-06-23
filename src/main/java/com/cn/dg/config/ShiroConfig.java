@@ -1,5 +1,6 @@
 package com.cn.dg.config;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.cache.MemoryConstrainedCacheManager;
 import org.apache.shiro.codec.Base64;
 import org.apache.shiro.mgt.SecurityManager;
@@ -25,6 +26,7 @@ import java.util.LinkedHashMap;
  * @Auther: zcz
  * @create 2020/4/16 11:51
  */
+@Slf4j
 @Configuration
 public class ShiroConfig {
     @Value("${timeout}")
@@ -35,6 +37,8 @@ public class ShiroConfig {
      */
     @Bean("shiroFilter")
     public ShiroFilterFactoryBean shiroFilter(@Qualifier("securityManager") SecurityManager manager) {
+        log.info("---------------------ShiroConfig:"+Thread.currentThread().getStackTrace()[1].getMethodName() + "----------------------");
+
         ShiroFilterFactoryBean bean = new ShiroFilterFactoryBean();
         bean.setSecurityManager(manager);
         // 如果不设置默认会自动寻找Web工程根目录下的"/login.jsp"页面
@@ -64,19 +68,26 @@ public class ShiroConfig {
         return bean;
     }
 
+
     /**
-     * shiro核心配置
+     * 配置密码校验器
      */
-    @Bean("securityManager")
-    public SecurityManager securityManager(@Qualifier("authRealm") AuthRealm authRealm, @Qualifier("rememberMeManager") CookieRememberMeManager rememberMeManager) {
-        DefaultWebSecurityManager manager = new DefaultWebSecurityManager();
-        //认证、授权
-        manager.setRealm(authRealm);
-        //session
-        manager.setSessionManager(sessionManager());
-        //记住我
-        manager.setRememberMeManager(rememberMeManager);
-        return manager;
+    @Bean("credentialMatcher")
+    public CredentialMatcher credentialMatcher() {
+        log.info("---------------------ShiroConfig:"+Thread.currentThread().getStackTrace()[1].getMethodName() + "----------------------");
+        return new CredentialMatcher();
+    }
+
+    /**
+     * 配置认证授权器
+     */
+    @Bean("authRealm")
+    public AuthRealm authRealm(@Qualifier("credentialMatcher") CredentialMatcher matcher) {
+        log.info("---------------------ShiroConfig:"+Thread.currentThread().getStackTrace()[1].getMethodName() + "----------------------");
+        AuthRealm authRealm = new AuthRealm();
+        authRealm.setCacheManager(new MemoryConstrainedCacheManager());
+        authRealm.setCredentialsMatcher(matcher);
+        return authRealm;
     }
 
     /**
@@ -84,12 +95,14 @@ public class ShiroConfig {
      */
     @Bean("sessionListener")
     public ShiroSessionListener sessionListener() {
+        log.info("---------------------ShiroConfig:"+Thread.currentThread().getStackTrace()[1].getMethodName() + "----------------------");
         ShiroSessionListener sessionListener = new ShiroSessionListener();
         return sessionListener;
     }
 
     @Bean("sessionManager")
     public DefaultWebSessionManager sessionManager() {
+        log.info("---------------------ShiroConfig:"+Thread.currentThread().getStackTrace()[1].getMethodName() + "----------------------");
         DefaultWebSessionManager sessionManager = new DefaultWebSessionManager();
         Collection<SessionListener> listeners = new ArrayList<>();
         //配置监听
@@ -104,39 +117,20 @@ public class ShiroConfig {
     }
 
     /**
-     * 配置认证授权器
+     * shiro核心配置
      */
-    @Bean("authRealm")
-    public AuthRealm authRealm(@Qualifier("credentialMatcher") CredentialMatcher matcher) {
-        AuthRealm authRealm = new AuthRealm();
-        authRealm.setCacheManager(new MemoryConstrainedCacheManager());
-        authRealm.setCredentialsMatcher(matcher);
-        return authRealm;
-    }
+    @Bean("securityManager")
+    public SecurityManager securityManager(@Qualifier("authRealm") AuthRealm authRealm, @Qualifier("rememberMeManager") CookieRememberMeManager rememberMeManager) {
+        log.info("---------------------ShiroConfig:"+Thread.currentThread().getStackTrace()[1].getMethodName() + "----------------------");
 
-    /**
-     * 配置密码校验器
-     */
-    @Bean("credentialMatcher")
-    public CredentialMatcher credentialMatcher() {
-        return new CredentialMatcher();
-    }
-
-    /**
-     * 开启shiro aop注解支持.使用代理方式;所以需要开启代码支持;开启 权限注解 Controller才能使用@RequiresPermissions
-     */
-    @Bean
-    public AuthorizationAttributeSourceAdvisor authorizationAttributeSourceAdvisor(@Qualifier("securityManager") SecurityManager securityManager) {
-        AuthorizationAttributeSourceAdvisor advisor = new AuthorizationAttributeSourceAdvisor();
-        advisor.setSecurityManager(securityManager);
-        return advisor;
-    }
-
-    @Bean
-    public DefaultAdvisorAutoProxyCreator defaultAdvisorAutoProxyCreator() {
-        DefaultAdvisorAutoProxyCreator creator = new DefaultAdvisorAutoProxyCreator();
-        creator.setProxyTargetClass(true);
-        return creator;
+        DefaultWebSecurityManager manager = new DefaultWebSecurityManager();
+        //认证、授权
+        manager.setRealm(authRealm);
+        //session
+        manager.setSessionManager(sessionManager());
+        //记住我
+        manager.setRememberMeManager(rememberMeManager);
+        return manager;
     }
 
     /**
@@ -144,6 +138,7 @@ public class ShiroConfig {
      */
     @Bean("rememberMeCookie")
     public SimpleCookie rememberMeCookie() {
+        log.info("---------------------ShiroConfig:"+Thread.currentThread().getStackTrace()[1].getMethodName() + "----------------------");
         //这个参数是cookie的名称，对应前端的checkbox的name = rememberMe
         SimpleCookie simpleCookie = new SimpleCookie("rememberMe");
         simpleCookie.setHttpOnly(true);
@@ -158,11 +153,32 @@ public class ShiroConfig {
      */
     @Bean("rememberMeManager")
     public CookieRememberMeManager rememberMeManager(@Qualifier("rememberMeCookie") SimpleCookie rememberMeCookie) {
+        log.info("---------------------ShiroConfig:"+Thread.currentThread().getStackTrace()[1].getMethodName() + "----------------------");
         CookieRememberMeManager cookieRememberMeManager = new CookieRememberMeManager();
         cookieRememberMeManager.setCookie(rememberMeCookie);
         //rememberMe cookie加密的密钥 建议每个项目都不一样 默认AES算法 密钥长度(128 256 512 位)
         cookieRememberMeManager.setCipherKey(Base64.decode("2AvVhdsgUs0FSA3SDFAdag=="));
         return cookieRememberMeManager;
     }
+
+    /**
+     * 开启shiro aop注解支持.使用代理方式;所以需要开启代码支持;开启 权限注解 Controller才能使用@RequiresPermissions
+     */
+    @Bean
+    public AuthorizationAttributeSourceAdvisor authorizationAttributeSourceAdvisor(@Qualifier("securityManager") SecurityManager securityManager) {
+        log.info("---------------------ShiroConfig:"+Thread.currentThread().getStackTrace()[1].getMethodName() + "----------------------");
+        AuthorizationAttributeSourceAdvisor advisor = new AuthorizationAttributeSourceAdvisor();
+        advisor.setSecurityManager(securityManager);
+        return advisor;
+    }
+
+    @Bean
+    public DefaultAdvisorAutoProxyCreator defaultAdvisorAutoProxyCreator() {
+        log.info("---------------------ShiroConfig:"+Thread.currentThread().getStackTrace()[1].getMethodName() + "----------------------");
+        DefaultAdvisorAutoProxyCreator creator = new DefaultAdvisorAutoProxyCreator();
+        creator.setProxyTargetClass(true);
+        return creator;
+    }
+
 
 }
