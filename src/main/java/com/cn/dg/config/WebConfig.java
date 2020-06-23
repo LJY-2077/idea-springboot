@@ -1,6 +1,6 @@
 package com.cn.dg.config;
 
-import com.cn.dg.common.system.interceptor.LoginHandlerInterceptor;
+import com.cn.dg.common.system.interceptor.WebInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -13,10 +13,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @since
  */
 @Configuration
-public class LoginWebMvcConfigurer implements WebMvcConfigurer {
+public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new LoginHandlerInterceptor())
+        registry.addInterceptor(new WebInterceptor())
                 .addPathPatterns("/**").excludePathPatterns("/login", "/index.html");
 
     }

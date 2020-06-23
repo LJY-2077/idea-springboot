@@ -24,6 +24,10 @@ spring:
     content-type: text/html
     cache: false
     mode: LEGACYHTML5
+  redis:
+    host: localhost
+    port: 6379
+    timeout: 2000s
 
 mybatis:
   mapper-locations: classpath:mapper/*/*.xml  #配置映射文件

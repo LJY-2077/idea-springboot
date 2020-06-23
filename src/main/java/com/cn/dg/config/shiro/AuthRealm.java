@@ -1,4 +1,4 @@
-package com.cn.dg.config;
+package com.cn.dg.config.shiro;
 
 import com.cn.dg.bean.system.*;
 import com.cn.dg.mapper.system.DgSysPermissionMapper;

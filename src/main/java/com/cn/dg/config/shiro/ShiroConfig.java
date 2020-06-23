@@ -1,4 +1,4 @@
-package com.cn.dg.config;
+package com.cn.dg.config.shiro;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.cache.MemoryConstrainedCacheManager;

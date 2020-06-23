@@ -1,4 +1,4 @@
-package com.cn.dg.config;
+package com.cn.dg.config.shiro;
 
 import org.apache.shiro.session.Session;
 import org.apache.shiro.session.SessionListener;

@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
  * @since
  */
 @Component
-public class LoginHandlerInterceptor implements HandlerInterceptor {
+public class WebInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
