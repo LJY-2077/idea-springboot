@@ -37,3 +37,4 @@ D:\workspace\springboot_demo_v1\src\main\java\com\cn\dg\bean\system\DgSysUserRol
 D:\workspace\springboot_demo_v1\src\main\java\com\cn\dg\common\exception\LoginException.java
 D:\workspace\springboot_demo_v1\src\main\java\com\cn\dg\bean\system\DgSysRole.java
 D:\workspace\springboot_demo_v1\src\main\java\com\cn\dg\mapper\system\DgSysMenuMapper.java
+D:\workspace\springboot_demo_v1\src\main\java\com\cn\dg\controller\UserController.java

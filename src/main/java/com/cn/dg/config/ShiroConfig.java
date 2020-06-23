@@ -37,19 +37,28 @@ public class ShiroConfig {
     public ShiroFilterFactoryBean shiroFilter(@Qualifier("securityManager") SecurityManager manager) {
         ShiroFilterFactoryBean bean = new ShiroFilterFactoryBean();
         bean.setSecurityManager(manager);
+        // 如果不设置默认会自动寻找Web工程根目录下的"/login.jsp"页面
+        // 配器shirot认登录累面地址，前后端分离中登录累面跳转应由前端路由控制，后台仅返回json数据, 对应LoginController中unauth请求
         bean.setLoginUrl("/login_page");
         bean.setSuccessUrl("/page_main");
-        bean.setUnauthorizedUrl("/");
-        //拦截器.
+        // 未授权界面, 对应LoginController中 unauthorized 请求
+        bean.setUnauthorizedUrl("/unauthorized");
+        /*
+         * anon:所有url都都可以匿名访问，authc:所有url都必须认证通过才可以访问;
+         * 过滤链定义，从上向下顺序执行，authc 应放在 anon 下面
+         * */
         LinkedHashMap<String, String> filterChainMap = new LinkedHashMap<>();
+        // 配置不会被拦截的链接 顺序判断，因为前端模板采用了thymeleaf，这里不能直接使用 ("/static/**", "anon")来配置匿名访问，必须配置到每个静态目录
         filterChainMap.put("/index", "anon");
         filterChainMap.put("/login", "anon");
-        filterChainMap.put("/logout", "anon");
         //<!-- 过滤链定义，从上向下顺序执行，一般将/**放在最为下边 -->:这是一个坑呢，一不小心代码就不好使了;
         //<!-- authc:所有url都必须认证通过才可以访问; anon:所有url都都可以匿名访问-->
         filterChainMap.put("/static/**", "anon");
         //authc表示需要登录
-        filterChainMap.put("/*", "authc");
+        filterChainMap.put("/**", "authc");
+        // 配置退出 过滤器,其中的具体的退出代码Shiro已经替我们实现了, 位置放在 anon、authc下面
+        filterChainMap.put("/logout", "logout");
+
         //自定义拦截器
         bean.setFilterChainDefinitionMap(filterChainMap);
         return bean;
