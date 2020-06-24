@@ -29,6 +29,15 @@
                 iframeHeight: 320
             });
         })
+        $(function () {
+            $('#testbutton').click(function () {
+                window.parent.window.$.addtabs.add({
+                    target: "#tabs1",
+                    url: "example/ajax/mailbox.txt",
+                    title: "test"
+                });
+            })
+        })
     </script>
 </head>
 
@@ -106,7 +115,7 @@
                     <div class="col-sm-9">
                         <div id="tabs">
                             <!-- Nav tabs -->
-                            <ul class="nav nav-tabs" role="tablist">
+                            <ul th:id="tabs1" class="nav nav-tabs" role="tablist">
                                 <li role="presentation" class="active">
                                     <a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
                             </ul>
@@ -156,6 +165,11 @@
                     console.log(treeNode)
                     if (treeNode.url) {
                         window.open(treeNode.url, treeNode.name, "iframe");
+                        window.parent.window.$.addtabs.add({
+                            target: "#tabs1",
+                            url: "example/ajax/mailbox.txt",
+                            title: treeNode.name
+                        });
                     } else {
                         alert("此节点没有链接！")
                     }
