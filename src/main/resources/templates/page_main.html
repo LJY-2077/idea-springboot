@@ -4,46 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <title>主页</title>
+    <!-- css:ztree-->
     <link rel="stylesheet" type="text/css" href="../static/zTree/css/zTreeStyle/zTreeStyle.css"/>
-
+    <!-- css:bootstrap-->
     <link rel="stylesheet" type="text/css" href="../static/bootstrap/css/bootstrap.css"/>
     <link rel="stylesheet" type="text/css" href="../static/bootstrap/css/bootstrap-grid.css"/>
     <link rel="stylesheet" type="text/css" href="../static/bootstrap/css/bootstrap-reboot.css"/>
-
+    <!-- css:bootstrap-addtabs-->
+    <link rel="stylesheet" type="text/css" href="../static/bootstrap/addtabs/bootstrap.addtabs.css"/>
+    <!-- jq:jqurey-->
     <script type="text/javascript" src="../static/jq/jquery-1.9.1.min.js"></script>
+    <!-- jq:ztree-->
     <script type="text/javascript" src="../static/zTree/js/jquery.ztree.core.js"></script>
     <script type="text/javascript" src="../static/zTree/js/jquery.ztree.all.min.js"></script>
     <script type="text/javascript" src="../static/zTree/demo/ztree.js"></script>
-
+    <!-- jq:bootstrap-->
     <script type="text/javascript" src="../static/bootstrap/js/bootstrap.bundle.js"></script>
     <script type="text/javascript" src="../static/bootstrap/js/bootstrap.js"></script>
-
+    <!-- jq:bootstrap-addtabs-->
+    <script type="text/javascript" src="../static/bootstrap/addtabs/bootstrap.addtabs.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $.addtabs({
+                iframeHeight: 320
+            });
+        })
+    </script>
 </head>
-<style type="text/css">
-    body {
-        padding: 20px;
-    }
-
-    .headLeft {
-        float: left;
-    }
-
-    .headRight {
-        padding-top: 40px;
-        padding-left: 340px;
-    }
-
-    .search {
-        margin-bottom: 10px;
-    }
-
-    .search .toolbar {
-    }
-</style>
-<!--必须使用较新版本的BootStrap才有如下效果-->
 
 <body>
-
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -53,7 +42,7 @@
                         <a class="navbar-brand " href="#">后台管理系统</a>
                     </div>
                     <div id="navbar" class="navbar-right">
-                        <a class="navbar-brand" href="#">当前用户：<label th:text="${username}"></label></a>
+                        <a class="navbar-brand" href="#">当前用户：<label th:text="${userame}"></label></a>
                     </div>
                 </div>
             </nav>
@@ -75,7 +64,61 @@
         <div class="col-lg-9">
             <div class="layui-body">
                 <!-- 内容主体区域 -->
-                    <iframe th:id="iframe" th:name="iframe"  scrolling="no" frameborder="no" ></iframe>
+                <iframe th:id="iframe" th:name="iframe" scrolling="no" frameborder="no"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <ul class="list-group">
+                            <a class="list-group-item" data-addtab="mail" data-url="./ajax/mailbox.txt">mailbox</a>
+                            <a class="list-group-item" data-addtab="mail1" data-url="./ajax/mailbox.txt"
+                               data-ajax="true">Use
+                                Ajax</a>
+                            <a class="list-group-item" data-addtab="message" data-url="./ajax/mailbox.txt"
+                               data-content="Customize the content">
+                                <i class="glyphicon glyphicon-bullhorn"></i>指定内容
+                            </a>
+                            <a class="list-group-item" data-addtab="setting" data-url="./ajax/mailbox.txt"
+                               data-title="Customize the title">
+                                <i class="glyphicon glyphicon-cog"></i>指定标题
+                            </a>
+                            <a class="list-group-item" data-addtab="userMenu1" data-url="./ajax/mailbox.txt">
+                                用户菜单1
+                            </a>
+                            <a class="list-group-item" data-addtab="userMenu2" data-url="./ajax/button.html">
+                                用户菜单2
+                            </a>
+                            <a class="list-group-item" data-addtab="sina" data-url="http://sina.com.cn">
+                                新浪
+                            </a>
+                            <a class="list-group-item" data-addtab="baidu" data-url="http://baidu.com">
+                                百度
+                            </a>
+                            <a class="list-group-item" onclick="Addtabs.closeAll();">
+                                关闭所有
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="col-sm-9">
+                        <div id="tabs">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="home">I'm a homepage.</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -111,9 +154,9 @@
             callback: {//绑定事件
                 onClick: function (a, b, treeNode) {
                     console.log(treeNode)
-                    if(treeNode.url){
-                        window.open(treeNode.url,treeNode.name,"iframe");
-                    }else{
+                    if (treeNode.url) {
+                        window.open(treeNode.url, treeNode.name, "iframe");
+                    } else {
                         alert("此节点没有链接！")
                     }
                 }
