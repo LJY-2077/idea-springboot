@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="TcnpSetting">
+    <option name="ip" value="172.29.12.78" />
+    <option name="port" value="24801" />
+    <option name="dbName" value="tcnpt" />
+    <option name="user" value="cambt" />
+    <option name="password" value="cambt" />
+    <option name="loginTcnpUser" value="lijy" />
+    <option name="loginTcnpPassword" value="104@#%!120@#%!121@#%!100@#%!49@#%!56@#%!52@#%!52@#%!" />
+  </component>
+</project>

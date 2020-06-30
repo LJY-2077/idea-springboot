@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../RuoYi/ruoyi.iml" filepath="$PROJECT_DIR$/../RuoYi/ruoyi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../RuoYi/ruoyi-admin/ruoyi-admin.iml" filepath="$PROJECT_DIR$/../RuoYi/ruoyi-admin/ruoyi-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../RuoYi/ruoyi-common/ruoyi-common.iml" filepath="$PROJECT_DIR$/../RuoYi/ruoyi-common/ruoyi-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../RuoYi/ruoyi-framework/ruoyi-framework.iml" filepath="$PROJECT_DIR$/../RuoYi/ruoyi-framework/ruoyi-framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../RuoYi/ruoyi-generator/ruoyi-generator.iml" filepath="$PROJECT_DIR$/../RuoYi/ruoyi-generator/ruoyi-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../RuoYi/ruoyi-quartz/ruoyi-quartz.iml" filepath="$PROJECT_DIR$/../RuoYi/ruoyi-quartz/ruoyi-quartz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../RuoYi/ruoyi-system/ruoyi-system.iml" filepath="$PROJECT_DIR$/../RuoYi/ruoyi-system/ruoyi-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../spring-boot-shiro/spring-boot-shiro.iml" filepath="$PROJECT_DIR$/../spring-boot-shiro/spring-boot-shiro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_demo_v1.iml" filepath="$PROJECT_DIR$/springboot_demo_v1.iml" />
+    </modules>
+  </component>
+</project>

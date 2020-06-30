@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="39500039-20d1-4d28-996d-7a9edb7793a9" name="Default Changelist" comment="1generator代码生成工具java工具类">
+      <change beforePath="$PROJECT_DIR$/../spring-boot-shiro/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot-shiro/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-boot-shiro/src/main/java/com/leigq/www/shiro/util/CodeGeneratorUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot-shiro/src/main/java/com/leigq/www/shiro/util/CodeGeneratorUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
+    <option name="RECENT_COMMON_BRANCH" value="master" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/soft/apache-maven-3.6.3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1dQTvlvjtjag2QZY63tNoxX9EQW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="flattenModules" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/bootstrap/addtabs" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.54050076" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\springboot_demo_v1\src\main\resources\static\jq" />
+      <recent name="D:\workspace\springboot_demo_v1\src\main\resources\mapper\system" />
+      <recent name="D:\workspace\springboot_demo_v1\src\main\resources\static\" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.cn.dg" />
+      <recent name="common" />
+      <recent name="com.cn.lijy.service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="common.exception" />
+      <recent name="com.cn.dg.bean.shiro" />
+      <recent name="com.cn.dg.bean" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\springboot_demo_v1\src\main\resources\static\bootstrap\addtabs" />
+      <recent name="D:\workspace\springboot_demo_v1\src\main\resources\static\bootstrap\js" />
+      <recent name="D:\workspace\springboot_demo_v1\src\main\resources\templates" />
+      <recent name="D:\workspace\springboot_demo_v1\src\main\resources\templates\pageuser" />
+      <recent name="D:\workspace\springboot_demo_v1\src\main\resources\templates\pagemenu" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SpringbootDemoV1Application">
+    <configuration name="PasswordUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cn.dg.common.util.PasswordUtil" />
+      <module name="springboot_demo_v1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cn.dg.common.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RuoYiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ruoyi-admin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ruoyi.RuoYiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootShiroApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-shiro" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.leigq.www.shiro.SpringBootShiroApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootDemoV1Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot_demo_v1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cn.dg.SpringbootDemoV1Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.PasswordUtil" />
+      <item itemvalue="Spring Boot.RuoYiApplication" />
+      <item itemvalue="Spring Boot.SpringbootDemoV1Application" />
+      <item itemvalue="Spring Boot.SpringBootShiroApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.PasswordUtil" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="39500039-20d1-4d28-996d-7a9edb7793a9" name="Default Changelist" comment="" />
+      <created>1592354771206</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592354771206</updated>
+      <workItem from="1592354787908" duration="1720000" />
+      <workItem from="1592356556273" duration="15286000" />
+      <workItem from="1592440787379" duration="17920000" />
+      <workItem from="1592470835119" duration="1404000" />
+      <workItem from="1592478697284" duration="29601000" />
+      <workItem from="1592557336961" duration="13858000" />
+      <workItem from="1592631067794" duration="14515000" />
+      <workItem from="1592787296090" duration="1308000" />
+      <workItem from="1592792368296" duration="21969000" />
+      <workItem from="1592873527168" duration="20142000" />
+      <workItem from="1592959352355" duration="6157000" />
+      <workItem from="1593479659228" duration="2362000" />
+    </task>
+    <task id="LOCAL-00001" summary="增加登录拦截器">
+      <created>1592397139753</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1592397139753</updated>
+    </task>
+    <task id="LOCAL-00002" summary="增加登录拦截器">
+      <created>1592397525573</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1592397525573</updated>
+    </task>
+    <task id="LOCAL-00003" summary="数据库调整">
+      <created>1592463394549</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1592463394549</updated>
+    </task>
+    <task id="LOCAL-00004" summary="war">
+      <created>1592468525750</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1592468525750</updated>
+    </task>
+    <task id="LOCAL-00005" summary="war">
+      <created>1592483174876</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1592483174876</updated>
+    </task>
+    <task id="LOCAL-00006" summary="增加ztree菜单">
+      <created>1592531990663</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1592531990663</updated>
+    </task>
+    <task id="LOCAL-00007" summary="增加ztree菜单">
+      <created>1592532107208</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1592532107208</updated>
+    </task>
+    <task id="LOCAL-00008" summary="1增加菜单数据库&#10;2generator代码生成工具">
+      <created>1592542851271</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1592542851271</updated>
+    </task>
+    <task id="LOCAL-00009" summary="1增加菜单数据库&#10;2generator代码生成工具">
+      <created>1592542945114</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1592542945114</updated>
+    </task>
+    <task id="LOCAL-00010" summary="1generator代码生成工具java工具类">
+      <created>1592545545766</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1592545545766</updated>
+    </task>
+    <task id="LOCAL-00011" summary="1generator代码生成工具java工具类">
+      <created>1592545598132</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1592545598132</updated>
+    </task>
+    <task id="LOCAL-00012" summary="1generator代码生成工具java工具类">
+      <created>1592545817374</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1592545817374</updated>
+    </task>
+    <task id="LOCAL-00013" summary="登录窗口调整">
+      <created>1592549529126</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1592549529126</updated>
+    </task>
+    <task id="LOCAL-00014" summary="登录窗口调整">
+      <created>1592549861575</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1592549861575</updated>
+    </task>
+    <task id="LOCAL-00015" summary="增加bootstrap框架">
+      <created>1592554474037</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1592554474037</updated>
+    </task>
+    <task id="LOCAL-00016" summary="增加bootstrap框架">
+      <created>1592556193043</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1592556193043</updated>
+    </task>
+    <task id="LOCAL-00017" summary="增减shiro权限框架">
+      <created>1592644808233</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1592644808233</updated>
+    </task>
+    <task id="LOCAL-00018" summary="ztree菜单调整">
+      <created>1592807969093</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1592807969093</updated>
+    </task>
+    <task id="LOCAL-00019" summary="ztree菜单调整">
+      <created>1592812465145</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1592812465145</updated>
+    </task>
+    <task id="LOCAL-00020" summary="ztree url跳转 ifram">
+      <created>1592820280060</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1592820280060</updated>
+    </task>
+    <task id="LOCAL-00021" summary="权限调整">
+      <created>1592879467320</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1592879467320</updated>
+    </task>
+    <task id="LOCAL-00022" summary="1generator代码生成工具java工具类">
+      <created>1592890043495</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1592890043495</updated>
+    </task>
+    <task id="LOCAL-00023" summary="shiro配置log日志">
+      <created>1592896250914</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1592896250914</updated>
+    </task>
+    <task id="LOCAL-00024" summary="过滤器命名调整">
+      <created>1592901560698</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1592901560698</updated>
+    </task>
+    <task id="LOCAL-00025" summary="shiro配置log日志">
+      <created>1592902903172</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1592902903172</updated>
+    </task>
+    <task id="LOCAL-00026" summary="增加bootstap.addtabs">
+      <created>1592964223705</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1592964223705</updated>
+    </task>
+    <task id="LOCAL-00027" summary="增加bootstap.addtabs">
+      <created>1592965209883</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1592965209883</updated>
+    </task>
+    <task id="LOCAL-00028" summary="增加redis">
+      <created>1593482174268</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1593482174268</updated>
+    </task>
+    <task id="LOCAL-00029" summary="增加redis">
+      <created>1593482639940</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1593482639940</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="增加登录拦截器" />
+    <MESSAGE value="数据库调整" />
+    <MESSAGE value="war" />
+    <MESSAGE value="增加ztree菜单" />
+    <MESSAGE value="1增加菜单数据库&#10;2generator代码生成工具" />
+    <MESSAGE value="登录窗口调整" />
+    <MESSAGE value="增加bootstrap框架" />
+    <MESSAGE value="增减shiro权限框架" />
+    <MESSAGE value="ztree菜单调整" />
+    <MESSAGE value="ztree url跳转 ifram" />
+    <MESSAGE value="权限调整" />
+    <MESSAGE value="1generator代码生成工具java工具类" />
+    <MESSAGE value="过滤器命名调整" />
+    <MESSAGE value="shiro配置log日志" />
+    <MESSAGE value="增加bootstap.addtabs" />
+    <MESSAGE value="增加redis" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加redis" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="22" key="#Inspections" timestamp="1592537489419">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="22" key="#Inspections/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592537489419" />
+    <state x="275" y="22" key="#Notifications" timestamp="1592787362786">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="22" key="#Notifications/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592787362786" />
+    <state x="275" y="22" key="#Project_Structure" timestamp="1592536291750">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="22" key="#Project_Structure/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592536291750" />
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592630910601">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592630910601" />
+    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser" timestamp="1592635947878">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592635947878" />
+    <state x="412" y="139" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1592546550553">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="412" y="139" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592546550553" />
+    <state x="334" y="279" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1592636813679">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="334" y="279" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592636813679" />
+    <state x="408" y="222" width="579" height="293" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1592534942082">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="408" y="222" width="579" height="293" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592534942082" />
+    <state x="408" y="243" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1592636824760">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="408" y="243" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592636824760" />
+    <state x="267" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1592636191936">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="267" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592636191936" />
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592807245660">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592807245660" />
+    <state x="426" y="256" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1592536222373">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="426" y="256" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592536222373" />
+    <state x="281" y="0" key="CommitChangelistDialog2" timestamp="1593482904700">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="281" y="0" key="CommitChangelistDialog2/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1593482904700" />
+    <state width="450" height="438" key="DebuggerActiveHint" timestamp="1592878169911">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="450" height="438" key="DebuggerActiveHint/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592878169911" />
+    <state x="127" y="55" width="1092" height="610" key="DiffContextDialog" timestamp="1592964394492">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="127" y="55" width="1092" height="610" key="DiffContextDialog/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592964394492" />
+    <state x="463" y="108" key="FileChooserDialogImpl" timestamp="1592631522984">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="108" key="FileChooserDialogImpl/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592631522984" />
+    <state width="905" height="570" key="GridCell.Tab.0.bottom" timestamp="1592966327263">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="570" key="GridCell.Tab.0.bottom/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592966327263" />
+    <state width="905" height="570" key="GridCell.Tab.0.center" timestamp="1592966327263">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="570" key="GridCell.Tab.0.center/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592966327263" />
+    <state width="905" height="570" key="GridCell.Tab.0.left" timestamp="1592966327263">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="570" key="GridCell.Tab.0.left/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592966327263" />
+    <state width="905" height="570" key="GridCell.Tab.0.right" timestamp="1592966327263">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="570" key="GridCell.Tab.0.right/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592966327263" />
+    <state width="905" height="570" key="GridCell.Tab.1.bottom" timestamp="1592966327264">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="570" key="GridCell.Tab.1.bottom/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592966327264" />
+    <state width="905" height="570" key="GridCell.Tab.1.center" timestamp="1592966327264">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="570" key="GridCell.Tab.1.center/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592966327264" />
+    <state width="905" height="570" key="GridCell.Tab.1.left" timestamp="1592966327263">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="570" key="GridCell.Tab.1.left/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592966327263" />
+    <state width="905" height="570" key="GridCell.Tab.1.right" timestamp="1592966327264">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="570" key="GridCell.Tab.1.right/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592966327264" />
+    <state width="905" height="570" key="GridCell.Tab.2.bottom" timestamp="1592966327265">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="570" key="GridCell.Tab.2.bottom/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592966327265" />
+    <state width="905" height="570" key="GridCell.Tab.2.center" timestamp="1592966327265">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="570" key="GridCell.Tab.2.center/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592966327265" />
+    <state width="905" height="570" key="GridCell.Tab.2.left" timestamp="1592966327264">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="570" key="GridCell.Tab.2.left/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592966327264" />
+    <state width="905" height="570" key="GridCell.Tab.2.right" timestamp="1592966327265">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="570" key="GridCell.Tab.2.right/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592966327265" />
+    <state x="213" y="19" key="Maven.ArtifactSearchDialog" timestamp="1592534403004">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="213" y="19" key="Maven.ArtifactSearchDialog/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592534403004" />
+    <state x="344" y="61" key="NewModule_or_Project.wizard" timestamp="1592442584699">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="344" y="61" key="NewModule_or_Project.wizard/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592442584699" />
+    <state x="254" y="26" key="Registry" timestamp="1592547344262">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="254" y="26" key="Registry/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592547344262" />
+    <state x="470" y="74" key="RollbackChangesDialog" timestamp="1592890008391">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="470" y="74" key="RollbackChangesDialog/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592890008391" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1592619362200">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592619362200" />
+    <state x="0" y="105" width="564" height="524" key="StructurePopup" timestamp="1592900209054">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="0" y="105" width="564" height="524" key="StructurePopup/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592900209054" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1593482911956">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1593482911956" />
+    <state x="363" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1593479990731">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="363" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1593479990731" />
+    <state x="234" y="100" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1592538738244">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="234" y="100" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592538738244" />
+    <state x="-1280" y="0" width="972" height="715" key="dock-window-1" timestamp="1592639241748">
+      <screen x="-1280" y="0" width="1280" height="984" />
+    </state>
+    <state x="-1280" y="0" width="972" height="715" key="dock-window-1/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592639241748" />
+    <state x="370" y="155" key="git4idea.merge.GitPullDialog" timestamp="1592468702905">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="370" y="155" key="git4idea.merge.GitPullDialog/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592468702905" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1592818157083">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592818157083" />
+    <state x="339" y="17" width="672" height="676" key="search.everywhere.popup" timestamp="1592879580555">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="17" width="672" height="676" key="search.everywhere.popup/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1592879580555" />
+  </component>
+</project>
