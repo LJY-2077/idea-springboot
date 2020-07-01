@@ -244,3 +244,7 @@ j
 :src/main/resources/static/bootstrap/js/bootstrap.bundle.js,2\b\2bb002896393a2d19de9cd564df049597f2df4e4
 [
 +src/main/resources/templates/page_main.html,c\9\c9a83ca79bdf2212a532eca83e94c3811546c23b
+b
+2src/main/java/com/cn/dg/common/util/RedisUtil.java,6\d\6dce163bdb8b947aeddc756d7f733fc67d5d828f
+_
+/src/main/java/com/cn/dg/config/RedisConfig.java,a\c\ac8ff19fd950d8f1da5fa83b3f08dd2f12fb0b09
