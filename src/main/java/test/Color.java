@@ -8,7 +8,8 @@ package test;
 public enum Color {
     RED("01", "红色"),
     Blue("02", "蓝色"),
-    Yellow("03", "黄色");
+    Yellow("03", "黄色"),
+    Pink("04","粉色");
 
     private Color(String code, String desc) {
         this.code = code;
